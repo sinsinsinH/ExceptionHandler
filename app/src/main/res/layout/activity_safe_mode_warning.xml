@@ -13,15 +13,6 @@
         android:orientation="vertical"
         tools:context=".support.DebugSafeModeTipActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ec0000"
-            android:padding="10dp"
-            android:text=" FBI  WARNING"
-            android:textColor="#fff"
-            android:textSize="30dp"
-            android:textStyle="bold" />
 
 
         <TextView
@@ -30,7 +21,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:padding="15dp"
-            android:text="APP已经崩溃了，请告知开发者！"
+            android:text="APP发生严重异常，请告知开发者！"
             android:textColor="#fff"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -44,22 +35,11 @@
             android:clickable="true"
             android:gravity="center"
             android:padding="15dp"
-            android:text="查看历史崩溃记录"
+            android:text="查看历史错误记录"
             android:textColor="@drawable/theme_stroke_selector"
             android:textSize="18dp"
             android:textStyle="bold" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:text="开发阶段建议弹出该Activity,以免遗漏bug。线上版本就不要展示该页面了。当看到该提示时就说明APP已经崩溃了，开发者可以手动杀进程，不要再让APP继续运行了"
-            android:textColor="#fff"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
 
     </LinearLayout>

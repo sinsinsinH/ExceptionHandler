@@ -123,6 +123,22 @@ public class CrashLogFragment extends Fragment {
         });
     }
 
+    private void closeFileContent(final File file) {
+
+        fileReadHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    String content = read(file);
+                    update(file, "");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+    }
+
     private void update(final File file, final String content) {
         if (content == null) {
             return;
@@ -214,7 +230,12 @@ public class CrashLogFragment extends Fragment {
                         int position = ((int) v.getTag());
                         if (logs.get(position).content == null) {
                             readFileContent(logs.get(position).file);
+                        } else {
+                            logs.get(position).content = null;
+                            adapter.notifyDataSetChanged();
+
                         }
+
                     }
                 });
                 copy.setOnClickListener(new View.OnClickListener() {
